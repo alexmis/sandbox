@@ -1,4 +1,4 @@
-package org.mial.reflections;
+package org.mial.training.inter0.reflections;
 
 import java.lang.reflect.Method;
 
