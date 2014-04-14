@@ -1,4 +1,6 @@
-package org.mial.training.inter0.reflections;
+package org.mial.training.reflections;
+
+import org.mial.training.reflections.RunThisMethod;
 
 public class MyService {
 

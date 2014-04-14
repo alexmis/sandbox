@@ -1,4 +1,4 @@
-package org.mial.training.inter0.reflections;
+package org.mial.training.reflections;
 
 public class Main {
 

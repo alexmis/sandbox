@@ -1,6 +1,6 @@
-package org.mial.training.inter1.impl;
+package org.mial.training.quoter.impl;
 
-import org.mial.training.inter1.Quoter;
+import org.mial.training.quoter.Quoter;
 
 import java.util.List;
 

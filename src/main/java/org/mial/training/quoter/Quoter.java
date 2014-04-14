@@ -1,4 +1,4 @@
-package org.mial.training.inter1;
+package org.mial.training.quoter;
 
 public interface Quoter {
     void sayQuote();
