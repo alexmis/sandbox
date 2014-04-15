@@ -4,6 +4,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
+    <bean class="org.mial.training.robot.TalkingRobotImpl" init-method="talk">
+        <property name="quoters">
+            <list>
+                <ref bean="shakespearQuoter"/>
+                <ref bean="terminatorQuoter"/>
+            </list>
+        </property>
+    </bean>
+
     <bean id="shakespearQuoter" class="org.mial.training.quoter.impl.ShakespearQuoter">
         <property name="message" value="2 b || ! 2 b"/>
     </bean>
