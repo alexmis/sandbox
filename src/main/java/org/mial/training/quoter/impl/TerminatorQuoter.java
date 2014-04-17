@@ -1,11 +1,13 @@
 package org.mial.training.quoter.impl;
 
 import org.mial.training.annotation.Benchmark;
+import org.mial.training.annotation.DeprecatedClass;
 import org.mial.training.quoter.Quoter;
 
 import java.util.List;
 
 @Benchmark
+@DeprecatedClass(newImpl = T1000.class)
 public class TerminatorQuoter implements Quoter {
     private List<String> messages;
 

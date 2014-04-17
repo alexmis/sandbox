@@ -36,6 +36,9 @@
         <!--slf4j-->
         <slf4j.version>1.7.5</slf4j.version>
 
+        <!--cglib-->
+        <cglib.version>3.1</cglib.version>
+
         <!--Lombok-->
         <lombok.version>1.12.6</lombok.version>
 
@@ -92,6 +95,13 @@
             <version>${spring.version}</version>
         </dependency>-->
 
+        <!--cglib-->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>${cglib.version}</version>
+        </dependency>
+
         <!-- Logging -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -136,27 +146,27 @@
         </dependency>-->
 
         <!--Resteasy-->
-       <!-- <dependency>
-            <groupId>org.jboss.resteasy</groupId>
-            <artifactId>resteasy-jaxrs</artifactId>
-            <version>3.0.6.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.resteasy</groupId>
-            <artifactId>resteasy-jaxb-provider</artifactId>
-            <version>3.0.6.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.resteasy</groupId>
-            <artifactId>resteasy-jettison-provider</artifactId>
-            <version>3.0.6.Final</version>
-        </dependency>
+        <!-- <dependency>
+             <groupId>org.jboss.resteasy</groupId>
+             <artifactId>resteasy-jaxrs</artifactId>
+             <version>3.0.6.Final</version>
+         </dependency>
+         <dependency>
+             <groupId>org.jboss.resteasy</groupId>
+             <artifactId>resteasy-jaxb-provider</artifactId>
+             <version>3.0.6.Final</version>
+         </dependency>
+         <dependency>
+             <groupId>org.jboss.resteasy</groupId>
+             <artifactId>resteasy-jettison-provider</artifactId>
+             <version>3.0.6.Final</version>
+         </dependency>
 
-        <dependency>
-            <groupId>org.jboss.resteasy</groupId>
-            <artifactId>resteasy-spring</artifactId>
-            <version>3.0.6.Final</version>
-        </dependency>-->
+         <dependency>
+             <groupId>org.jboss.resteasy</groupId>
+             <artifactId>resteasy-spring</artifactId>
+             <version>3.0.6.Final</version>
+         </dependency>-->
     </dependencies>
 
     <build>
