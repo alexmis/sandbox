@@ -4,10 +4,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean class="org.mial.training.bpp.BenchmarkBeanPostProcessor"/>
     <bean class="org.mial.training.bpp.InjectRandomBeanPostProcessor"/>
     <bean class="org.mial.training.bpp.RunThisMethodBeanPostProcessor"/>
+    <bean class="org.mial.training.bpp.TransactionBeanPostProcessor"/>
+    <bean class="org.mial.training.bpp.BenchmarkBeanPostProcessor"/>
 
+    <bean class="org.mial.training.dataart.DataartServiceImpl"/>
 
     <bean class="org.mial.training.robot.TalkingRobotImpl" init-method="talk">
         <property name="quoters">

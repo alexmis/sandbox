@@ -12,10 +12,13 @@ import java.lang.management.ManagementFactory;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
+import java.util.HashMap;
+import java.util.Map;
 
 public class BenchmarkBeanPostProcessor implements BeanPostProcessor {
 
     private BenchmarkFlag flag;
+    private Map<String,Class> map = new HashMap<String, Class>();
 
     public BenchmarkBeanPostProcessor() throws Exception {
         flag = new BenchmarkFlag();
@@ -27,13 +30,16 @@ public class BenchmarkBeanPostProcessor implements BeanPostProcessor {
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+        if (bean.getClass().isAnnotationPresent(Benchmark.class)) {
+            map.put(beanName, bean.getClass());
+        }
         return bean;
     }
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        final Class<?> type = bean.getClass();
-        if (type.getAnnotation(Benchmark.class) != null) {
+        final Class<?> type = map.get(beanName);
+        if (type != null) {
             return Proxy.newProxyInstance(type.getClassLoader(), type.getInterfaces(), new InvocationHandler() {
                 @Override
                 public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {

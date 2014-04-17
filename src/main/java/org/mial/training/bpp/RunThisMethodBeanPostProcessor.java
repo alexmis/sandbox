@@ -14,7 +14,7 @@ public class RunThisMethodBeanPostProcessor implements BeanPostProcessor {
 
         for (Method method : methods) {
             final RunThisMethod annotation = method.getAnnotation(RunThisMethod.class);
-            if (annotation != null){
+            if (annotation != null) {
                 ReflectionUtils.invokeMethod(method, bean);
             }
         }

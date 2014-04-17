@@ -14,9 +14,9 @@ public class InjectRandomBeanPostProcessor implements BeanPostProcessor {
         final Field[] fields = bean.getClass().getDeclaredFields();
         for (Field field : fields) {
             InjectRandomInt injectRandom = field.getAnnotation(InjectRandomInt.class);
-            if (injectRandom != null){
+            if (injectRandom != null) {
                 Random random = new Random(System.currentTimeMillis());
-                int randomNumber =  random.nextInt(injectRandom.max() - injectRandom.min() - 1) + injectRandom.min();
+                int randomNumber = random.nextInt(injectRandom.max() - injectRandom.min() - 1) + injectRandom.min();
 
                 field.setAccessible(true);
                 ReflectionUtils.setField(field, bean, randomNumber);

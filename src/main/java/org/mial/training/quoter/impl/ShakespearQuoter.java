@@ -1,7 +1,6 @@
 package org.mial.training.quoter.impl;
 
 import org.mial.training.annotation.InjectRandomInt;
-import org.mial.training.annotation.InvokeThisMethod;
 import org.mial.training.annotation.RunThisMethod;
 import org.mial.training.quoter.Quoter;
 
