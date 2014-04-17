@@ -1,9 +1,11 @@
 package org.mial.training.quoter.impl;
 
+import org.mial.training.annotation.Benchmark;
 import org.mial.training.quoter.Quoter;
 
 import java.util.List;
 
+@Benchmark
 public class TerminatorQuoter implements Quoter{
     private List<String> messages;
 
