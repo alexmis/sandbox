@@ -23,7 +23,7 @@
         </property>
     </bean>
 
-    <bean id="shakespearQuoter" class="org.mial.training.quoter.impl.ShakespearQuoter">
+    <bean id="shakespearQuoter" class="org.mial.training.quoter.impl.ShakespearQuoter" scope="prototype" destroy-method="destroyMethodName">
         <property name="message" value="2 b || ! 2 b"/>
     </bean>
 

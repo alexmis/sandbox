@@ -4,6 +4,8 @@ import org.mial.training.annotation.InjectRandomInt;
 import org.mial.training.annotation.RunThisMethod;
 import org.mial.training.quoter.Quoter;
 
+import javax.annotation.PreDestroy;
+
 public class ShakespearQuoter implements Quoter {
 
     private String message;
@@ -28,5 +30,9 @@ public class ShakespearQuoter implements Quoter {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public void destroyMethodName() {
+        System.out.println("-------------- destroyMethodName ------------------");
     }
 }
