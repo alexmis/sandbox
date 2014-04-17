@@ -1,10 +1,10 @@
 package org.mial.training.reflections;
 
-import org.mial.training.reflections.RunThisMethod;
+import org.mial.training.annotation.InvokeThisMethod;
 
 public class MyService {
 
-    @RunThisMethod(repeat = 3)
+    @InvokeThisMethod(repeat = 3)
     public void execute(){
         System.out.println("Execute method");
     }

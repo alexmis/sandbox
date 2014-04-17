@@ -1,5 +1,7 @@
 package org.mial.training.reflections;
 
+import org.mial.training.annotation.InvokeThisMethod;
+
 import java.lang.reflect.Method;
 
 public class ObjectFactory {
@@ -16,7 +18,7 @@ public class ObjectFactory {
         final T t = type.newInstance();
 
         for (Method method : type.getMethods()) {
-            final RunThisMethod repeat = method.getAnnotation(RunThisMethod.class);
+            final InvokeThisMethod repeat = method.getAnnotation(InvokeThisMethod.class);
 
             if (repeat != null) {
                 for (int i = 0; i < repeat.repeat(); i++) {

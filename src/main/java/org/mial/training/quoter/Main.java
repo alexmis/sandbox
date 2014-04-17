@@ -1,4 +1,4 @@
-package org.mial.training;
+package org.mial.training.quoter;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
