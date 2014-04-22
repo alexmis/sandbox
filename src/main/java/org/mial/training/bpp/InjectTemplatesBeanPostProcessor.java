@@ -1,4 +1,4 @@
-package org.mial.training.mail.bpp;
+package org.mial.training.bpp;
 
 import org.mial.training.mail.InjectTemplates;
 import org.mial.training.mail.MailGenerator;
