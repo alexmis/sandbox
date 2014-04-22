@@ -1,8 +1,9 @@
 package org.mial.training.mail;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 public class Main {
     public static void main(String[] args) {
-        MailSender mailSender = new MailSender();
-        mailSender.sendMail();
+        new AnnotationConfigApplicationContext("org.mial.training.mail");
     }
 }

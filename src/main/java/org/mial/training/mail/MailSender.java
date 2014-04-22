@@ -1,31 +1,26 @@
 package org.mial.training.mail;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+import java.util.Map;
+
+@Component
 public class MailSender {
+
+    @Autowired
+    private Map<String, MailGenerator> template;
+
+    @PostConstruct
     public void sendMail() {
-        int mailTemplateCode = DBUtils.findMailTemplateCode();
-        String html = null;
-        switch (mailTemplateCode) {
-            case 1:
-                html = generateWelcomeTemplate();
-
-
-                break;
-            case 2:
-                html = generatePolicyRenewal();
-
-
-                break;
-            case 3:
-                html = generateEmailCallbackTemplate();
-
-
-                break;
-        }
+        String templateCode = String.valueOf(DBUtils.findMailTemplateCode());
+        String html = template.get(templateCode).generateHTML();
         sendMail(html);
     }
 
     private void sendMail(String html) {
-        System.out.println("sending mail... "+html);
+        System.out.println("Sending mail... " + html);
     }
 
     private String generateEmailCallbackTemplate() {
