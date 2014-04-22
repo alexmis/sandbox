@@ -2,7 +2,7 @@ package org.mial.training.mail;
 
 import org.springframework.stereotype.Component;
 
-@Component("1")
+@MailTemplate(MailTemplateEnum.WELCOME)
 public class WelcomeMailGenerator implements MailGenerator {
     @Override
     public String generateHTML() {
