@@ -13,7 +13,7 @@
     <bean class="org.mial.training.bpp.BenchmarkBeanPostProcessor"/>
 
     <bean class="org.mial.training.bfpp.WarningBeanFactoryPostProcessor"/>
-    <bean class="org.mial.training.bfpp.DeprecationHandlerBeanFactoryPostProcessor"/>
+    <!--<bean class="org.mial.training.bfpp.DeprecationHandlerBeanFactoryPostProcessor"/>-->
 
     <context:property-placeholder location="application.properties"/>
 

@@ -3,11 +3,13 @@ package org.mial.training.quoter.impl;
 import org.mial.training.annotation.InjectRandomInt;
 import org.mial.training.annotation.RunThisMethod;
 import org.mial.training.quoter.Quoter;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
-import javax.annotation.PreDestroy;
-
+@Component
 public class ShakespearQuoter implements Quoter {
 
+    @Value("${shakespear}")
     private String message;
 
     @InjectRandomInt(min = 3, max = 6)

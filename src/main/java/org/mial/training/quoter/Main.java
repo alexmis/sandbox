@@ -1,9 +1,12 @@
 package org.mial.training.quoter;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.mial.training.robot.TalkingRobot;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
-        new ClassPathXmlApplicationContext("context.xml");
+        ApplicationContext context = new AnnotationConfigApplicationContext(JavaConfig.class);
+        context.getBean(TalkingRobot.class).talk();
     }
 }
